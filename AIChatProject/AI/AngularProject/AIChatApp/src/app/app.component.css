@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
+
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+}
+
+.history-column {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+.component-column {
+  flex: 2;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Optional styling for the headers */
+.history-column h2, .component-column h2 {
+  color: #ff2b70; /* Angular logo gradient color */
+  font-size: 24px;
+}
+
+
+
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff2b70, #b242f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #f5f5f5; /* Light mode background */
+  height: 100vh;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.chat-header {
+  text-align: center;
+  margin: 10px 20vh 30px 50vh;
+  color: linear-gradient(90deg, #ff2b70, #b242f2);
+
+}
+
+.chat-history {
+  flex-grow: 1;
+  overflow-y: overlay;
+  padding: 10px;
+  margin: 30px 20vh 30px 50vh;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.chat-message.sent {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.chat-message.received {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.chat-message p {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff; /* Light message background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.chat-message.sent p {
+  background-color: #e0e0e0; /* Sent message background */
+}
+
+.chat-input {
+  display: flex;
+  margin: 30px 20vh 30px 50vh;
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+#send-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.responses {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.messages {
+  padding-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1098039216);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 2;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.blue {
+  color: blue;
+  background: #0000ff24;
+  font-size: 20px;
+}
+
+.green {
+  color: #000;
+  background: rgba(128, 128, 128, 0.0901960784);
+  font-size: 20px;
+}
+
+#send-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+
+.chat-container.dark-mode {
+  background-color: #1e1e1e; /* Dark chat container */
+}
+
+.chat-history.dark-mode {
+  background-color: #222; /* Dark chat history background */
+}
+
+.chat-message p.dark-mode {
+  background-color: #333; /* Dark message background */
+}
+
+.chat-message.sent p.dark-mode {
+  background-color: #444; /* Sent message background */
+}
+
+#message-input.dark-mode {
+  border: 1px solid #555; /* Dark border for input */
+  background-color: #222; /* Dark input background */
+  color: #fff; /* Input text color */
+}
+
+#send-button.dark-mode {
+  background-color: #007bff; /* Button color in dark mode */
+  color: #fff; /* Button text color */
+}
+
+.chat-message.received p.dark-mode {
+  background-color: #444; /* Received message background */
+}
+
+.col-md-8 {
+  height: 100vh;
+}
